@@ -1,17 +1,16 @@
 # filename: streamtlit_app.py
+import joblib
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler, MinMaxScaler, OneHotEncoder
 from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import r2_score, mean_absolute_error, root_mean_squared_error, mean_squared_error
-from sklearn.ensemble import RandomForestRegressor
 from sqlalchemy import create_engine
 import streamlit as st
 import pickle 
 import os
 import sys
 import importlib
+from joblib import load, dump
 
 st.set_page_config(
     page_title="Dynamic Pricing Model",
@@ -223,8 +222,7 @@ data["customer_state_enc"] = data["customer_state"].map(state_map)
     
 @st.cache_resource
 def load_model():
-    with open("models/randomforest.pkl",'rb') as file:
-        loaded = pickle.load(file)
+    loaded = joblib.load('models/randomforest_compressed.pkl')
     return loaded
 
 #Define function to get encoding result
