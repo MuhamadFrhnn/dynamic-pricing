@@ -2,7 +2,7 @@
 .venv/
 .venv
 *data*
-*model*
+# *model*
 *venv*
 *cache*
 secrets.toml
