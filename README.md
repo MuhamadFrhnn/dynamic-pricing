@@ -102,9 +102,9 @@ Beberapa ide untuk pengembangan aplikasi selanjutnya:
 
 ## Kontributor
 
-- Muhamad Farhan Haidar - 
-- Kahfi Sabillah Arfan -
-- Azhari Dwi Pramesti -
+- Muhamad Farhan Haidar - Main Contributor
+- Kahfi Sabillah Arfan - Second Contributor
+- Azhari Dwi Pramesti - Second Contributor
 
 ## Lisensi
 
